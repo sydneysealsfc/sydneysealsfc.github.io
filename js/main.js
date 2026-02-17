@@ -57,6 +57,7 @@
   var galleryGrid = document.getElementById("galleryGrid");
   var lightbox = document.getElementById("lightbox");
   var lightboxImg = document.getElementById("lightboxImg");
+  var lightboxCredit = document.getElementById("lightboxCredit");
   var displayedImages = [];
   var currentIndex = 0;
 
@@ -68,10 +69,16 @@
     return arr;
   }
 
+  function setCredit(index) {
+    var c = displayedImages[index].credit;
+    lightboxCredit.textContent = c ? "Photo: " + c : "";
+  }
+
   function openLightbox(index) {
     currentIndex = index;
     lightboxImg.src = displayedImages[index].src;
     lightboxImg.alt = displayedImages[index].alt;
+    setCredit(index);
     lightbox.classList.add("open");
     document.body.style.overflow = "hidden";
   }
@@ -85,12 +92,14 @@
     currentIndex = (currentIndex - 1 + displayedImages.length) % displayedImages.length;
     lightboxImg.src = displayedImages[currentIndex].src;
     lightboxImg.alt = displayedImages[currentIndex].alt;
+    setCredit(currentIndex);
   }
 
   function showNext() {
     currentIndex = (currentIndex + 1) % displayedImages.length;
     lightboxImg.src = displayedImages[currentIndex].src;
     lightboxImg.alt = displayedImages[currentIndex].alt;
+    setCredit(currentIndex);
   }
 
   if (galleryGrid && lightbox) {
@@ -110,6 +119,12 @@
           img.loading = "lazy";
           img.addEventListener("click", function () { openLightbox(i); });
           div.appendChild(img);
+          if (photo.credit) {
+            var credit = document.createElement("span");
+            credit.className = "masonry__credit";
+            credit.textContent = "Photo: " + photo.credit;
+            div.appendChild(credit);
+          }
           galleryGrid.appendChild(div);
         });
       });

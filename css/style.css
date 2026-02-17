@@ -542,6 +542,23 @@ ul {
   filter: brightness(1.08);
 }
 
+.masonry__credit {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0.5rem 0.75rem;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.6));
+  color: var(--white);
+  font-size: 0.75rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.masonry__item:hover .masonry__credit {
+  opacity: 1;
+}
+
 /* ============================================================
    Lightbox
    ============================================================ */
@@ -609,6 +626,17 @@ ul {
 
 .lightbox__prev { left: 1.5rem; }
 .lightbox__next { right: 1.5rem; }
+
+.lightbox__credit {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.85rem;
+  text-align: center;
+  pointer-events: none;
+}
 
 /* ============================================================
    About page
