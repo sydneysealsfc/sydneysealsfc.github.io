@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About | Sydney Seals Freediving Club</title>
-  <meta name="description" content="Learn about the Sydney Seals Freediving Club, how we formed, our aims, and key documents including the club constitution.">
+  <title>Gallery | Sydney Seals Freediving Club</title>
+  <meta name="description" content="Photos from Sydney Seals Freediving Club events, training, competitions, and fun dives.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
@@ -21,8 +21,8 @@
       </a>
       <div class="nav__links" id="navLinks">
         <a href="index.html">Home</a>
-        <a href="about.html" class="active">About</a>
-        <a href="gallery.html">Gallery</a>
+        <a href="about.html">About</a>
+        <a href="gallery.html" class="active">Gallery</a>
         <a href="faq.html">FAQ</a>
         <a href="committee.html">Committee</a>
         <a href="https://www.teamapp.com/clubs/940563?_webpage=v1" target="_blank" rel="noopener">Events</a>
@@ -38,32 +38,50 @@
   <!-- Page header -->
   <header class="page-header">
     <div class="container">
-      <h1>About us</h1>
-      <p>How the Sydney Seals came to be</p>
+      <h1>Gallery</h1>
+      <p>Moments from in and out of the water</p>
     </div>
   </header>
 
-  <!-- Content -->
+  <!-- Gallery -->
   <section class="section">
-    <div class="container about-page__content">
-      <h2>Who we are</h2>
-      <p>Freediving&#8212;also called apnea diving or skin diving&#8212;is the practice of underwater breath-holding. Sydney Seals Freediving Club is a not-for-profit, volunteer-run organisation that supports the development and growth of freedivers in Sydney and surrounding regions. We run pool training, competitions, depth sessions, fun dives, masterclasses, and workshops.</p>
-      <p>We are an affiliated club of the Australian Freediving Association (AFA).</p>
-
-      <h2>Our aims</h2>
-      <p>We create an environment that encourages freedivers to reach their full potential through developing skills, healthy competition, and connection with water and community. We promote freediving as a clean and safe sport, enhancing education on water confidence and safety skills. We foster a collective of freedivers through events and activities, including efforts to conserve, restore, and care for marine ecosystems while promoting environmentally friendly practices.</p>
-
-      <h2>How we came to be</h2>
-      <p>Sydney offers endless stunning beaches, dive spots, and access to depth. The freediving community here has thrived for some time, with many talented instructors and schools operating across the city.</p>
-      <p>The club formed to bring this community together, to facilitate access to pools, to uphold high standards of safety, and to streamline the organisation of competitions, events, and fun dives.</p>
-      <p>Sydney Seals does not run or facilitate freediving certifications&#8212;we leave that work to the talented instructors around Sydney. Our training helps club members progress in their freediving journey. As a not-for-profit, we do not favour any particular freediving business.</p>
-
-      <h2>Key documents</h2>
-      <div class="docs-list">
-        <a href="#">&#128196; Constitution (PDF)</a>
+    <div class="container">
+      <div class="masonry">
+        <div class="masonry__item">
+          <img src="images/mardigras.jpg" alt="Freedivers underwater at Mardi Gras with rainbow colours" loading="lazy">
+        </div>
+        <div class="masonry__item">
+          <img src="images/hero.jpg" alt="Half-underwater split shot of a freediver in a pool" loading="lazy">
+        </div>
+        <div class="masonry__item">
+          <img src="images/competition.jpg" alt="Safety team at Sydney Olympic Park Aquatic Centre" loading="lazy">
+        </div>
+        <div class="masonry__item">
+          <img src="images/community.jpg" alt="Freediver making a heart shape underwater" loading="lazy">
+        </div>
+        <div class="masonry__item">
+          <img src="images/safety-team.jpg" alt="Safety team posing poolside" loading="lazy">
+        </div>
+        <div class="masonry__item">
+          <img src="images/training.jpg" alt="Group of freedivers posing underwater" loading="lazy">
+        </div>
+        <div class="masonry__item">
+          <img src="images/gallery.jpg" alt="Freediver preparing at the pool edge" loading="lazy">
+        </div>
       </div>
+      <p class="text-center" style="margin-top:2.5rem;">
+        <a href="https://www.instagram.com/sydney.seals.freediving.club/" target="_blank" rel="noopener" class="btn btn--outline">See more on Instagram</a>
+      </p>
     </div>
   </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <button class="lightbox__close" id="lightboxClose" aria-label="Close">&times;</button>
+    <button class="lightbox__prev" id="lightboxPrev" aria-label="Previous image">&#8249;</button>
+    <button class="lightbox__next" id="lightboxNext" aria-label="Next image">&#8250;</button>
+    <img class="lightbox__img" id="lightboxImg" src="" alt="">
+  </div>
 
   <!-- Footer -->
   <footer class="footer">
@@ -87,8 +105,8 @@
         <div>
           <h3>Quick links</h3>
           <p><a href="index.html">Home</a></p>
+          <p><a href="about.html">About us</a></p>
           <p><a href="faq.html">FAQ</a></p>
-          <p><a href="committee.html">Committee</a></p>
           <p><a href="https://www.teamapp.com/clubs/940563?_webpage=v1" target="_blank" rel="noopener">Events</a></p>
         </div>
       </div>
