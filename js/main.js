@@ -53,16 +53,25 @@
     });
   });
 
-  /* ---- Lightbox ---- */
+  /* ---- Gallery (loaded from gallery.json) ---- */
+  var galleryGrid = document.getElementById("galleryGrid");
   var lightbox = document.getElementById("lightbox");
   var lightboxImg = document.getElementById("lightboxImg");
-  var galleryImages = document.querySelectorAll(".masonry__item img");
+  var displayedImages = [];
   var currentIndex = 0;
+
+  function shuffle(arr) {
+    for (var i = arr.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var tmp = arr[i]; arr[i] = arr[j]; arr[j] = tmp;
+    }
+    return arr;
+  }
 
   function openLightbox(index) {
     currentIndex = index;
-    lightboxImg.src = galleryImages[index].src;
-    lightboxImg.alt = galleryImages[index].alt;
+    lightboxImg.src = displayedImages[index].src;
+    lightboxImg.alt = displayedImages[index].alt;
     lightbox.classList.add("open");
     document.body.style.overflow = "hidden";
   }
@@ -73,21 +82,37 @@
   }
 
   function showPrev() {
-    currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
-    lightboxImg.src = galleryImages[currentIndex].src;
-    lightboxImg.alt = galleryImages[currentIndex].alt;
+    currentIndex = (currentIndex - 1 + displayedImages.length) % displayedImages.length;
+    lightboxImg.src = displayedImages[currentIndex].src;
+    lightboxImg.alt = displayedImages[currentIndex].alt;
   }
 
   function showNext() {
-    currentIndex = (currentIndex + 1) % galleryImages.length;
-    lightboxImg.src = galleryImages[currentIndex].src;
-    lightboxImg.alt = galleryImages[currentIndex].alt;
+    currentIndex = (currentIndex + 1) % displayedImages.length;
+    lightboxImg.src = displayedImages[currentIndex].src;
+    lightboxImg.alt = displayedImages[currentIndex].alt;
   }
 
-  if (lightbox && galleryImages.length) {
-    galleryImages.forEach(function (img, i) {
-      img.addEventListener("click", function () { openLightbox(i); });
-    });
+  if (galleryGrid && lightbox) {
+    fetch("gallery.json")
+      .then(function (res) { return res.json(); })
+      .then(function (data) {
+        var photos = shuffle(data.photos.slice());
+        var limit = data.show || photos.length;
+        displayedImages = photos.slice(0, limit);
+
+        displayedImages.forEach(function (photo, i) {
+          var div = document.createElement("div");
+          div.className = "masonry__item";
+          var img = document.createElement("img");
+          img.src = photo.src;
+          img.alt = photo.alt;
+          img.loading = "lazy";
+          img.addEventListener("click", function () { openLightbox(i); });
+          div.appendChild(img);
+          galleryGrid.appendChild(div);
+        });
+      });
 
     document.getElementById("lightboxClose").addEventListener("click", closeLightbox);
     document.getElementById("lightboxPrev").addEventListener("click", showPrev);

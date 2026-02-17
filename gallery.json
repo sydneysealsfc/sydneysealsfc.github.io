@@ -1,0 +1,12 @@
+{
+  "show": 6,
+  "photos": [
+    { "src": "images/gallery/mardigras.jpg", "alt": "Freedivers underwater at Mardi Gras with rainbow colours" },
+    { "src": "images/gallery/hero.jpg", "alt": "Half-underwater split shot of a freediver in a pool" },
+    { "src": "images/gallery/competition.jpg", "alt": "Safety team at Sydney Olympic Park Aquatic Centre" },
+    { "src": "images/gallery/community.jpg", "alt": "Freediver making a heart shape underwater" },
+    { "src": "images/gallery/safety-team.jpg", "alt": "Safety team posing poolside" },
+    { "src": "images/gallery/training.jpg", "alt": "Group of freedivers posing underwater" },
+    { "src": "images/gallery/gallery.jpg", "alt": "Freediver preparing at the pool edge" }
+  ]
+}
