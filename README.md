@@ -6,7 +6,13 @@ You do not need to install anything to edit the site. All content changes can be
 
 ## Editing content on GitHub
 
-To edit any file, navigate to it on GitHub, click the pencil icon (Edit this file), make your changes, and click "Commit changes." The site will rebuild and redeploy automatically within a couple of minutes.
+To edit any file, navigate to it on GitHub, click the pencil icon (Edit this file):
+
+<img width="500" alt="image" src="https://github.com/user-attachments/assets/d4cae374-0f59-4a43-91bc-5f58a84757ef" />
+
+
+Then make your changes and click "Commit changes" (or type Ctrl + S on your keyboard).
+The site will rebuild and redeploy automatically within a couple of minutes.
 
 ### Which file controls what
 
