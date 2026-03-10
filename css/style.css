@@ -317,6 +317,7 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
+  background: var(--blue-dark);
 }
 
 .hero__img,
