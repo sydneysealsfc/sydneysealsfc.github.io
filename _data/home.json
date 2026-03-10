@@ -1,7 +1,7 @@
 {
   "hero": {
     "videoSrc": "images/hero-compressed.mp4",
-    "posterSrc": "images/community.jpg",
+    "posterSrc": "images/gallery/community.jpg",
     "ctaText": "Become a Seal",
     "ctaLink": "#join"
   },
@@ -10,8 +10,15 @@
       "Sydney Seals Freediving Club is a not-for-profit, volunteer-run club supporting the development and growth of freedivers in Sydney and surrounding regions. We run pool training, competitions, depth sessions, fun dives, masterclasses, and workshops.",
       "We are an affiliated club of the Australian Freediving Association (AFA)."
     ],
-    "image": "images/hero.jpg",
-    "imageAlt": "Half-underwater split shot of a freediver in a pool",
+    "image": "images/gallery/2025-04-08-ssfc-first-pool-training-group.jpg",
+    "imageAlt": "Sydney Seals first pool training group photo",
+    "images": [
+      { "src": "images/gallery/2025-04-08-ssfc-first-pool-training-group.jpg", "alt": "Sydney Seals first pool training group photo" },
+      { "src": "images/gallery/2025-04-21-ssfc-easter-fun-dive-turtle.jpg", "alt": "Freediver with turtle at Easter fun dive" },
+      { "src": "images/gallery/2026-02-21-ssfc-mardi-gras-group-shirts.jpg", "alt": "Sydney Seals in matching shirts at Mardi Gras" },
+      { "src": "images/gallery/competition.jpg", "alt": "Safety team at Sydney Olympic Park Aquatic Centre" },
+      { "src": "images/gallery/2026-02-21-ssfc-mardi-gras-group-outfit-pose.jpg", "alt": "Sydney Seals group pose at Mardi Gras" }
+    ],
     "linkText": "Our story",
     "linkUrl": "/about/"
   },
@@ -36,9 +43,10 @@
       "Pool training currently runs on Tuesday evenings at Marrickville. Once you become a member, submit an expression of interest to join. Training fees cover lane hire; pool entry is separate.",
       "We also organise depth sessions, fun dives, masterclasses, competitions, and beach clean-ups throughout the year."
     ],
-    "image": "images/training.jpg",
+    "videoSrc": "images/training-timelapse.mp4",
+    "image": "images/gallery/training.jpg",
     "imageAlt": "Group of freedivers posing underwater",
-    "ctaText": "View events on TeamApp"
+    "ctaText": "Events & Merch on TeamApp"
   },
   "join": {
     "intro": "Want to join? We're sealiously excited! Membership covers one year with Sydney Seals and the AFA, which you need to compete in any AFA freediving competition in Australia.",

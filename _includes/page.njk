@@ -9,6 +9,12 @@
     </div>
   </header>
 
+  {% if pageImage %}
+  <div class="page-hero">
+    <img src="/{{ pageImage }}" alt="{{ pageImageAlt }}" class="page-hero__img">
+  </div>
+  {% endif %}
+
   <!-- Content -->
   <section class="section">
     <div class="container about-page__content animate-on-scroll">

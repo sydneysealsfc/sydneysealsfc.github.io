@@ -61,14 +61,14 @@
   <!-- Navigation -->
   <nav class="nav" role="navigation" aria-label="Main navigation">
     <div class="nav__inner">
-      <a href="/" class="nav__logo">
+      <span class="nav__logo">
         <img src="/images/logo.png" alt="{{ site.name }} logo" width="52" height="52">
-      </a>
+      </span>
       <div class="nav__links" id="navLinks" role="list">
         {% for item in site.nav %}
         <a href="{{ item.url }}" role="listitem"{% if page.url === item.url %} class="active" aria-current="page"{% endif %}>{{ item.label }}</a>
         {% endfor %}
-        <a href="{{ site.teamAppUrl }}" target="_blank" rel="noopener" role="listitem">Events<span class="sr-only"> (opens in new tab)</span></a>
+        <a href="{{ site.teamAppUrl }}" target="_blank" rel="noopener" role="listitem">Events &amp; Merch<span class="sr-only"> (opens in new tab)</span></a>
       </div>
       <button class="nav__hamburger" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks">
         <span></span>
@@ -106,7 +106,7 @@
           {% for item in site.nav %}
           <p><a href="{{ item.url }}">{{ item.label }}</a></p>
           {% endfor %}
-          <p><a href="{{ site.teamAppUrl }}" target="_blank" rel="noopener">Events</a></p>
+          <p><a href="{{ site.teamAppUrl }}" target="_blank" rel="noopener">Events &amp; Merch</a></p>
         </div>
       </div>
       <div class="footer__aoc">

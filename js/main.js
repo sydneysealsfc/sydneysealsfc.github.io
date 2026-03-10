@@ -73,8 +73,20 @@
   }
 
   function setCredit(index) {
-    var c = displayedImages[index].credit;
-    lightboxCredit.textContent = c ? "Photo: " + c : "";
+    var photo = displayedImages[index];
+    lightboxCredit.innerHTML = "";
+    if (photo.credit) {
+      if (photo.creditUrl) {
+        var a = document.createElement("a");
+        a.href = photo.creditUrl;
+        a.target = "_blank";
+        a.rel = "noopener noreferrer";
+        a.textContent = "Photo: " + photo.credit;
+        lightboxCredit.appendChild(a);
+      } else {
+        lightboxCredit.textContent = "Photo: " + photo.credit;
+      }
+    }
   }
 
   function openLightbox(index) {
@@ -140,7 +152,16 @@
           });
           div.appendChild(img);
           if (photo.credit) {
-            var credit = document.createElement("span");
+            var credit;
+            if (photo.creditUrl) {
+              credit = document.createElement("a");
+              credit.href = photo.creditUrl;
+              credit.target = "_blank";
+              credit.rel = "noopener noreferrer";
+              credit.addEventListener("click", function (e) { e.stopPropagation(); });
+            } else {
+              credit = document.createElement("span");
+            }
             credit.className = "masonry__credit";
             credit.textContent = "Photo: " + photo.credit;
             div.appendChild(credit);
@@ -226,6 +247,19 @@
       animatedEls.forEach(function (el) { el.classList.add("in-view"); });
       staggerEls.forEach(function (el) { el.classList.add("in-view"); });
     }
+  }
+
+  /* ---- Random page hero image ---- */
+  var randomImg = document.querySelector("[data-images]");
+  if (randomImg) {
+    try {
+      var images = JSON.parse(randomImg.getAttribute("data-images"));
+      if (images.length > 1) {
+        var pick = images[Math.floor(Math.random() * images.length)];
+        randomImg.src = "/" + pick.src;
+        randomImg.alt = pick.alt;
+      }
+    } catch (e) { /* use default */ }
   }
 
   /* ---- Parallax hero video ---- */

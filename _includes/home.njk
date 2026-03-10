@@ -26,7 +26,7 @@
           {% endfor %}
           <a href="{{ home.about.linkUrl }}" class="btn btn--outline">{{ home.about.linkText }}</a>
         </div>
-        <img src="/{{ home.about.image }}" alt="{{ home.about.imageAlt }}" class="about__img">
+        <img src="/{{ home.about.image }}" alt="{{ home.about.imageAlt }}" class="about__img"{% if home.about.images %} data-images='{{ home.about.images | dump | safe }}'{% endif %}>
       </div>
     </div>
   </section>
@@ -48,7 +48,13 @@
   <section class="section animate-on-scroll" id="training">
     <div class="container">
       <div class="training__grid">
+        {% if home.training.videoSrc %}
+        <video class="training__img" autoplay muted loop playsinline poster="/{{ home.training.image }}" aria-hidden="true">
+          <source src="/{{ home.training.videoSrc }}" type="video/mp4">
+        </video>
+        {% else %}
         <img src="/{{ home.training.image }}" alt="{{ home.training.imageAlt }}" class="training__img">
+        {% endif %}
         <div class="training__text">
           <h2>Training and events</h2>
           {% for p in home.training.text %}
