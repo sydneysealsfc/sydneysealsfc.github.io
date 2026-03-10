@@ -92,7 +92,7 @@
   function openLightbox(index) {
     lastFocusedElement = document.activeElement;
     currentIndex = index;
-    lightboxImg.src = displayedImages[index].src;
+    lightboxImg.src = "/" + displayedImages[index].src;
     lightboxImg.alt = displayedImages[index].alt;
     setCredit(index);
     lightbox.classList.add("open");
@@ -113,14 +113,14 @@
 
   function showPrev() {
     currentIndex = (currentIndex - 1 + displayedImages.length) % displayedImages.length;
-    lightboxImg.src = displayedImages[currentIndex].src;
+    lightboxImg.src = "/" + displayedImages[currentIndex].src;
     lightboxImg.alt = displayedImages[currentIndex].alt;
     setCredit(currentIndex);
   }
 
   function showNext() {
     currentIndex = (currentIndex + 1) % displayedImages.length;
-    lightboxImg.src = displayedImages[currentIndex].src;
+    lightboxImg.src = "/" + displayedImages[currentIndex].src;
     lightboxImg.alt = displayedImages[currentIndex].alt;
     setCredit(currentIndex);
   }
