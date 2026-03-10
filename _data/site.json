@@ -1,0 +1,21 @@
+{
+  "name": "Sydney Seals Freediving Club",
+  "tagline": "Dive deeper together",
+  "email": "sydneysealsfc@gmail.com",
+  "copyrightYear": "2026",
+  "teamAppUrl": "https://www.teamapp.com/clubs/940563?_webpage=v1",
+  "joinUrl": "https://australianfreediving.org/membership/",
+  "siteUrl": "https://sydneysealsfc.github.io",
+  "social": {
+    "instagram": "https://www.instagram.com/sydney.seals.freediving.club/",
+    "facebook": "https://www.facebook.com/groups/1674352359814540/"
+  },
+  "nav": [
+    { "label": "Home", "url": "/" },
+    { "label": "About", "url": "/about/" },
+    { "label": "Gallery", "url": "/gallery/" },
+    { "label": "FAQ", "url": "/faq/" },
+    { "label": "Committee", "url": "/committee/" }
+  ],
+  "acknowledgement": "The Sydney Seals Freediving Club acknowledges the traditional custodians of the Country on which we dive, gather, and play. We live and dive across the Country of many Nations, including of the Gadigal, Bidjigal, Guringai, and Dhawaral peoples. We extend our respect to Elders past and present and to traditional custodians who have cared for land and sea Country since time immemorial. We commit to respecting Country and acknowledge that sovereignty was never ceded."
+}

@@ -1,0 +1,77 @@
+{% extends "base.njk" %}
+
+{% block content %}
+  <!-- Hero -->
+  <section class="hero">
+    <video class="hero__video" autoplay muted loop playsinline poster="/{{ home.hero.posterSrc }}" aria-hidden="true">
+      <source src="/{{ home.hero.videoSrc }}" type="video/mp4">
+    </video>
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <img src="/images/logo-white.png" alt="{{ site.name }}" class="hero__logo">
+      <h1 class="hero__title">{{ site.name }}</h1>
+      <p class="hero__tagline">{{ site.tagline }}</p>
+      <a href="{{ home.hero.ctaLink }}" class="btn btn--primary hero__btn">{{ home.hero.ctaText }}</a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section animate-on-scroll" id="about">
+    <div class="container">
+      <div class="about__grid">
+        <div class="about__text">
+          <h2>About us</h2>
+          {% for p in home.about.text %}
+          <p>{{ p }}</p>
+          {% endfor %}
+          <a href="{{ home.about.linkUrl }}" class="btn btn--outline">{{ home.about.linkText }}</a>
+        </div>
+        <img src="/{{ home.about.image }}" alt="{{ home.about.imageAlt }}" class="about__img">
+      </div>
+    </div>
+  </section>
+
+  <!-- Core values -->
+  <section class="section section--alt animate-on-scroll" id="values">
+    <div class="container text-center">
+      <h2>Our values</h2>
+      <p style="max-width:650px;margin:0 auto 1.5rem;color:var(--gray);">{{ home.values.intro }}</p>
+      <div class="values">
+        {% for value in home.values.items %}
+        <div class="values__item">{{ value }}</div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- Training & events -->
+  <section class="section animate-on-scroll" id="training">
+    <div class="container">
+      <div class="training__grid">
+        <img src="/{{ home.training.image }}" alt="{{ home.training.imageAlt }}" class="training__img">
+        <div class="training__text">
+          <h2>Training and events</h2>
+          {% for p in home.training.text %}
+          <p>{{ p }}</p>
+          {% endfor %}
+          <a href="{{ site.teamAppUrl }}" target="_blank" rel="noopener" class="btn btn--primary">{{ home.training.ctaText }}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Join -->
+  <section class="section section--alt animate-on-scroll" id="join">
+    <div class="container join">
+      <h2>Become a Seal</h2>
+      <p>{{ home.join.intro }}</p>
+      <div class="join__benefits">
+        {% for benefit in home.join.benefits %}
+        <div class="join__benefit">{{ benefit }}</div>
+        {% endfor %}
+      </div>
+      <p>{{ home.join.outro | safe }}</p>
+      <a href="{{ site.joinUrl }}" target="_blank" rel="noopener" class="btn btn--primary">{{ home.join.ctaText }}</a>
+    </div>
+  </section>
+{% endblock %}

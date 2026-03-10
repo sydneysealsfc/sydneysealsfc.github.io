@@ -12,7 +12,7 @@
   --white: #ffffff;
   --black: #1a1a1a;
   --gray: #555555;
-  --gray-light: #999999;
+  --gray-light: #767676;
   --shadow: rgba(0, 0, 0, 0.1);
   --radius: 8px;
   --nav-height: 72px;
@@ -35,7 +35,7 @@ html {
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Source Sans 3", "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.7;
@@ -61,6 +61,7 @@ a:hover {
 }
 
 h1, h2, h3, h4 {
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
   line-height: 1.25;
   color: var(--blue);
@@ -125,8 +126,100 @@ ul {
 
 .text-center { text-align: center; }
 
+/* --- Accessibility --- */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  background: var(--blue);
+  color: var(--white);
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius);
+  font-weight: 700;
+  z-index: 2000;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 0.5rem;
+  color: var(--white);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Focus outline for keyboard navigation */
+:focus-visible {
+  outline: 3px solid var(--blue-light);
+  outline-offset: 2px;
+}
+
+/* Reduced motion: disable all animations and transitions */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .animate-on-scroll,
+  .values__item,
+  .join__benefit,
+  .committee__card {
+    opacity: 1;
+    transform: none;
+  }
+
+  .hero__video {
+    height: 100%;
+    top: 0;
+  }
+}
+
 /* ============================================================
-   Navigation
+   Scroll-driven animations
+   ============================================================ */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animate-on-scroll.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered children (values, benefits, committee cards) */
+.values__item,
+.join__benefit,
+.committee__card {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.values__item.in-view,
+.join__benefit.in-view,
+.committee__card.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================================================
+   Navigation (glassmorphism)
    ============================================================ */
 .nav {
   position: fixed;
@@ -134,7 +227,9 @@ ul {
   left: 0;
   width: 100%;
   height: var(--nav-height);
-  background: var(--white);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   box-shadow: 0 2px 8px var(--shadow);
   z-index: 1000;
   display: flex;
@@ -163,6 +258,7 @@ ul {
 }
 
 .nav__links a {
+  font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-size: 0.9rem;
   color: var(--black);
@@ -225,13 +321,21 @@ ul {
   justify-content: center;
 }
 
-.hero__img {
+.hero__img,
+.hero__video {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center 40%;
+}
+
+.hero__video {
+  /* Oversized to allow parallax movement without gaps */
+  height: 120%;
+  top: -10%;
+  will-change: transform;
 }
 
 .hero__overlay {
@@ -314,6 +418,7 @@ ul {
   background: var(--blue-tint);
   padding: 1rem 1.25rem;
   border-radius: var(--radius);
+  font-family: "Montserrat", sans-serif;
   font-weight: 600;
   color: var(--blue);
   text-align: center;
@@ -374,13 +479,16 @@ ul {
   padding: 1.25rem;
   border-radius: var(--radius);
   box-shadow: 0 2px 12px var(--shadow);
+  font-family: "Montserrat", sans-serif;
   font-weight: 600;
   color: var(--blue);
   font-size: 0.95rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.join .btn {
-  margin-top: 1rem;
+.join__benefit:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
 /* ============================================================
@@ -490,6 +598,12 @@ ul {
   box-shadow: 0 2px 12px var(--shadow);
   padding: 2rem 1.5rem;
   text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.committee__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
 .committee__avatar {
@@ -498,10 +612,19 @@ ul {
   border-radius: 50%;
   background: var(--blue-tint);
   margin: 0 auto 1rem;
+}
+
+.committee__avatar--placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bone);
+  border: 2px dashed var(--gray-light);
   object-fit: cover;
 }
 
 .committee__name {
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 1.05rem;
   color: var(--black);

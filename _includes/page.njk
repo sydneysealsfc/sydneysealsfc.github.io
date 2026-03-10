@@ -1,0 +1,18 @@
+{% extends "base.njk" %}
+
+{% block content %}
+  <!-- Page header -->
+  <header class="page-header">
+    <div class="container">
+      <h1>{{ title }}</h1>
+      {% if subtitle %}<p>{{ subtitle }}</p>{% endif %}
+    </div>
+  </header>
+
+  <!-- Content -->
+  <section class="section">
+    <div class="container about-page__content animate-on-scroll">
+      {{ content | safe }}
+    </div>
+  </section>
+{% endblock %}

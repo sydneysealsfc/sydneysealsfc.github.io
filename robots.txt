@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sydneysealsfc.github.io/sitemap.xml

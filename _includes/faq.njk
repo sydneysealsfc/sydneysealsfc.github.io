@@ -1,0 +1,34 @@
+{% extends "base.njk" %}
+
+{% block content %}
+  <!-- Page header -->
+  <header class="page-header">
+    <div class="container">
+      <h1>{{ title }}</h1>
+      {% if subtitle %}<p>{{ subtitle }}</p>{% endif %}
+    </div>
+  </header>
+
+  <!-- FAQ -->
+  <section class="section">
+    <div class="container">
+      {% for item in faq %}
+      <div class="faq__item">
+        <button class="faq__question" id="faq-q-{{ loop.index }}" aria-expanded="false" aria-controls="faq-a-{{ loop.index }}">
+          <span>{{ item.question }}</span>
+          <span class="faq__icon" aria-hidden="true"></span>
+        </button>
+        <div class="faq__answer" id="faq-a-{{ loop.index }}" role="region" aria-labelledby="faq-q-{{ loop.index }}">
+          <div class="faq__answer__inner">
+            {% if '<' in item.answer %}
+            {{ item.answer | safe }}
+            {% else %}
+            <p>{{ item.answer }}</p>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+{% endblock %}

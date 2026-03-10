@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Mathew Hardaker",
+    "role": "President",
+    "image": "images/committee/mathew-hardaker.jpg"
+  },
+  {
+    "name": "Emilia Tjernstr\u00f6m",
+    "role": "Vice-President",
+    "image": "images/committee/emilia-tjernstrom.jpg"
+  },
+  {
+    "name": "Vacant",
+    "role": "Treasurer",
+    "image": ""
+  },
+  {
+    "name": "Bill Cotis",
+    "role": "Secretary",
+    "image": "images/committee/bill-cotis.jpg"
+  },
+  {
+    "name": "Karen Sivieng",
+    "role": "Committee Member",
+    "image": "images/committee/karen-sivieng.jpg"
+  },
+  {
+    "name": "Kate Borysyuk",
+    "role": "Committee Member",
+    "image": "images/committee/kate-borysyuk.jpg"
+  },
+  {
+    "name": "Emma Fitch",
+    "role": "Committee Member",
+    "image": "images/committee/emma-fitch.jpg"
+  }
+]

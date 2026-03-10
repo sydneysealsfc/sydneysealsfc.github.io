@@ -3,6 +3,8 @@
 (function () {
   "use strict";
 
+  var prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
   /* ---- Mobile nav toggle ---- */
   var toggle = document.getElementById("navToggle");
   var links = document.getElementById("navLinks");
@@ -60,6 +62,7 @@
   var lightboxCredit = document.getElementById("lightboxCredit");
   var displayedImages = [];
   var currentIndex = 0;
+  var lastFocusedElement = null;
 
   function shuffle(arr) {
     for (var i = arr.length - 1; i > 0; i--) {
@@ -75,17 +78,25 @@
   }
 
   function openLightbox(index) {
+    lastFocusedElement = document.activeElement;
     currentIndex = index;
     lightboxImg.src = displayedImages[index].src;
     lightboxImg.alt = displayedImages[index].alt;
     setCredit(index);
     lightbox.classList.add("open");
     document.body.style.overflow = "hidden";
+    /* Move focus into the lightbox */
+    document.getElementById("lightboxClose").focus();
   }
 
   function closeLightbox() {
     lightbox.classList.remove("open");
     document.body.style.overflow = "";
+    /* Restore focus to the element that opened the lightbox */
+    if (lastFocusedElement) {
+      lastFocusedElement.focus();
+      lastFocusedElement = null;
+    }
   }
 
   function showPrev() {
@@ -103,7 +114,7 @@
   }
 
   if (galleryGrid && lightbox) {
-    fetch("gallery.json")
+    fetch("/gallery.json")
       .then(function (res) { return res.json(); })
       .then(function (data) {
         var photos = shuffle(data.photos.slice());
@@ -113,11 +124,20 @@
         displayedImages.forEach(function (photo, i) {
           var div = document.createElement("div");
           div.className = "masonry__item";
+          div.setAttribute("role", "button");
+          div.setAttribute("tabindex", "0");
+          div.setAttribute("aria-label", photo.alt + ". Click to enlarge.");
           var img = document.createElement("img");
-          img.src = photo.src;
-          img.alt = photo.alt;
+          img.src = "/" + photo.src;
+          img.alt = "";  /* alt on wrapper, not img, since wrapper is the interactive element */
           img.loading = "lazy";
-          img.addEventListener("click", function () { openLightbox(i); });
+          div.addEventListener("click", function () { openLightbox(i); });
+          div.addEventListener("keydown", function (e) {
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              openLightbox(i);
+            }
+          });
           div.appendChild(img);
           if (photo.credit) {
             var credit = document.createElement("span");
@@ -129,30 +149,95 @@
         });
       });
 
-    document.getElementById("lightboxClose").addEventListener("click", closeLightbox);
-    document.getElementById("lightboxPrev").addEventListener("click", showPrev);
-    document.getElementById("lightboxNext").addEventListener("click", showNext);
+    var closeBtn = document.getElementById("lightboxClose");
+    var prevBtn = document.getElementById("lightboxPrev");
+    var nextBtn = document.getElementById("lightboxNext");
+
+    closeBtn.addEventListener("click", closeLightbox);
+    prevBtn.addEventListener("click", showPrev);
+    nextBtn.addEventListener("click", showNext);
 
     lightbox.addEventListener("click", function (e) {
       if (e.target === lightbox) closeLightbox();
     });
+
+    /* Focus trapping inside lightbox */
+    var focusableInLightbox = [prevBtn, nextBtn, closeBtn];
 
     document.addEventListener("keydown", function (e) {
       if (!lightbox.classList.contains("open")) return;
       if (e.key === "Escape") closeLightbox();
       if (e.key === "ArrowLeft") showPrev();
       if (e.key === "ArrowRight") showNext();
+
+      /* Trap Tab within lightbox */
+      if (e.key === "Tab") {
+        var currentFocus = document.activeElement;
+        var idx = focusableInLightbox.indexOf(currentFocus);
+        if (e.shiftKey) {
+          if (idx <= 0) {
+            e.preventDefault();
+            focusableInLightbox[focusableInLightbox.length - 1].focus();
+          }
+        } else {
+          if (idx >= focusableInLightbox.length - 1) {
+            e.preventDefault();
+            focusableInLightbox[0].focus();
+          }
+        }
+      }
     });
   }
 
-  /* ---- Active nav link highlighting ---- */
-  var currentPage = window.location.pathname.split("/").pop() || "index.html";
-  document.querySelectorAll(".nav__links a").forEach(function (a) {
-    var href = a.getAttribute("href");
-    if (href === currentPage) {
-      a.classList.add("active");
-    } else if (href !== currentPage) {
-      /* Only remove if explicitly set in HTML and doesn't match */
+  /* ---- Scroll-driven animations (Intersection Observer) ---- */
+  if (!prefersReducedMotion) {
+    var animatedEls = document.querySelectorAll(".animate-on-scroll");
+    var staggerEls = document.querySelectorAll(".values__item, .join__benefit, .committee__card");
+
+    if ("IntersectionObserver" in window) {
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in-view");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+
+      animatedEls.forEach(function (el) { observer.observe(el); });
+
+      /* Stagger children with delay */
+      var staggerObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            var parent = entry.target.parentElement;
+            var siblings = parent.querySelectorAll(".values__item, .join__benefit, .committee__card");
+            siblings.forEach(function (el, i) {
+              el.style.transitionDelay = (i * 0.08) + "s";
+              el.classList.add("in-view");
+            });
+            siblings.forEach(function (el) { staggerObserver.unobserve(el); });
+          }
+        });
+      }, { threshold: 0.1 });
+
+      staggerEls.forEach(function (el) { staggerObserver.observe(el); });
+    } else {
+      animatedEls.forEach(function (el) { el.classList.add("in-view"); });
+      staggerEls.forEach(function (el) { el.classList.add("in-view"); });
     }
-  });
+  }
+
+  /* ---- Parallax hero video ---- */
+  var heroVideo = document.querySelector(".hero__video");
+  if (heroVideo && !prefersReducedMotion && window.matchMedia("(min-width: 769px)").matches) {
+    var hero = document.querySelector(".hero");
+    window.addEventListener("scroll", function () {
+      var scrollY = window.pageYOffset;
+      var heroBottom = hero.offsetTop + hero.offsetHeight;
+      if (scrollY < heroBottom) {
+        heroVideo.style.transform = "translateY(" + (scrollY * 0.3) + "px)";
+      }
+    }, { passive: true });
+  }
 })();
