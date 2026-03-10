@@ -59,16 +59,16 @@
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <!-- Navigation -->
-  <nav class="nav" role="navigation" aria-label="Main navigation">
+  <nav class="nav" aria-label="Main navigation">
     <div class="nav__inner">
       <span class="nav__logo">
         <img src="/images/logo.png" alt="{{ site.name }} logo" width="52" height="52">
       </span>
-      <div class="nav__links" id="navLinks" role="list">
+      <div class="nav__links" id="navLinks">
         {% for item in site.nav %}
-        <a href="{{ item.url }}" role="listitem"{% if page.url === item.url %} class="active" aria-current="page"{% endif %}>{{ item.label }}</a>
+        <a href="{{ item.url }}"{% if page.url === item.url %} class="active" aria-current="page"{% endif %}>{{ item.label }}</a>
         {% endfor %}
-        <a href="{{ site.teamAppUrl }}" target="_blank" rel="noopener" role="listitem">Events &amp; Merch<span class="sr-only"> (opens in new tab)</span></a>
+        <a href="{{ site.teamAppUrl }}" target="_blank" rel="noopener">Events &amp; Merch<span class="sr-only"> (opens in new tab)</span></a>
       </div>
       <button class="nav__hamburger" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks">
         <span></span>
