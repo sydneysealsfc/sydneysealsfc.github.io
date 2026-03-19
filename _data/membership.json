@@ -31,7 +31,7 @@
   ],
   "certification": "You will need a freediving certification to participate in our in-water activities. If you do not have one yet, ask us and we can point you to schools and instructors in Sydney.",
   "teamApp": {
-    "intro": "We use TeamApp to manage event bookings and sell club merchandise. Once you join, you can browse upcoming events and grab some Seals gear.",
+    "intro": "We use TeamApp to manage event bookings and sell club merchandise. Once you join, you can browse upcoming events and grab some Seals gear. Here are some examples below.",
     "merch": [
       { "name": "Seals swim cap", "price": "$14.99", "image": "images/merch/swim-cap.jpg" },
       { "name": "Mardi Gras 2026 singlet", "price": "$39.99", "image": "images/merch/singlet.png" }
