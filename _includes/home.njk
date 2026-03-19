@@ -3,7 +3,7 @@
 {% block content %}
   <!-- Hero -->
   <section class="hero">
-    <video class="hero__video" autoplay muted loop playsinline poster="/{{ home.hero.posterSrc }}" aria-hidden="true" fetchpriority="high">
+    <video class="hero__video" autoplay muted loop playsinline poster="/{{ home.hero.posterSrc }}" aria-hidden="true">
       <source data-src-desktop="/{{ home.hero.videoSrc }}" data-src-mobile="/{{ home.hero.videoSrcMobile }}" type="video/mp4">
     </video>
     <div class="hero__overlay"></div>
