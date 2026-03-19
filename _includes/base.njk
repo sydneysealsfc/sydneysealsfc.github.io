@@ -68,7 +68,10 @@
   <nav class="nav" aria-label="Main navigation">
     <div class="nav__inner">
       <span class="nav__logo">
-        <img src="/images/logo.png" alt="{{ site.name }} logo" width="52" height="52">
+        <picture>
+          <source srcset="/images/logo.webp" type="image/webp">
+          <img src="/images/logo.png" alt="{{ site.name }} logo" width="52" height="52">
+        </picture>
       </span>
       <div class="nav__links" id="navLinks">
         {% for item in site.nav %}

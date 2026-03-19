@@ -3,12 +3,15 @@
 {% block content %}
   <!-- Hero -->
   <section class="hero">
-    <video class="hero__video" autoplay muted loop playsinline poster="/{{ home.hero.posterSrc }}" aria-hidden="true">
+    <video class="hero__video" autoplay muted loop playsinline poster="/{{ home.hero.posterSrc }}" aria-hidden="true" fetchpriority="high">
       <source data-src-desktop="/{{ home.hero.videoSrc }}" data-src-mobile="/{{ home.hero.videoSrcMobile }}" type="video/mp4">
     </video>
     <div class="hero__overlay"></div>
     <div class="hero__content">
-      <img src="/images/logo-white.png" alt="{{ site.name }}" class="hero__logo">
+      <picture>
+        <source srcset="/images/logo-white.webp" type="image/webp">
+        <img src="/images/logo-white.png" alt="{{ site.name }}" class="hero__logo">
+      </picture>
       <h1 class="hero__title">{{ site.name }}</h1>
       <p class="hero__tagline">{{ site.tagline }}</p>
       <a href="{{ home.hero.ctaLink }}" class="btn btn--primary hero__btn">{{ home.hero.ctaText }}</a>
@@ -26,7 +29,7 @@
           {% endfor %}
           <a href="{{ home.about.linkUrl }}" class="btn btn--outline">{{ home.about.linkText }}</a>
         </div>
-        <img src="/{{ home.about.image }}" alt="{{ home.about.imageAlt }}" class="about__img" loading="lazy"{% if home.about.images %} data-images='{{ home.about.images | dump | safe }}'{% endif %}>
+        <img src="/{{ home.about.image }}" alt="{{ home.about.imageAlt }}" class="about__img" loading="lazy" width="1200" height="798"{% if home.about.images %} data-images='{{ home.about.images | dump | safe }}'{% endif %}>
       </div>
     </div>
   </section>

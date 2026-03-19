@@ -265,11 +265,15 @@
   /* ---- Responsive video source selection (deferred to avoid blocking LCP) ---- */
   var isMobile = window.innerWidth <= 768;
 
-  /* Swap hero poster to smaller mobile version */
+  /* Swap posters to smaller mobile versions */
   if (isMobile) {
     var heroPoster = document.querySelector(".hero__video");
     if (heroPoster && heroPoster.poster) {
       heroPoster.poster = heroPoster.poster.replace("community.jpg", "community-mobile.jpg");
+    }
+    var trainingPoster = document.querySelector(".training__img");
+    if (trainingPoster && trainingPoster.poster) {
+      trainingPoster.poster = trainingPoster.poster.replace("training.jpg", "training-mobile.jpg");
     }
   }
 
