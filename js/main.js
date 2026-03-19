@@ -262,12 +262,28 @@
     } catch (e) { /* use default */ }
   }
 
-  /* ---- Responsive video source selection ---- */
+  /* ---- Responsive video source selection (deferred to avoid blocking LCP) ---- */
   var isMobile = window.innerWidth <= 768;
-  document.querySelectorAll("video source[data-src-desktop]").forEach(function (source) {
-    source.src = isMobile ? source.getAttribute("data-src-mobile") : source.getAttribute("data-src-desktop");
-    source.parentElement.load();
-  });
+
+  /* Swap hero poster to smaller mobile version */
+  if (isMobile) {
+    var heroPoster = document.querySelector(".hero__video");
+    if (heroPoster && heroPoster.poster) {
+      heroPoster.poster = heroPoster.poster.replace("community.jpg", "community-mobile.jpg");
+    }
+  }
+
+  function loadVideos() {
+    document.querySelectorAll("video source[data-src-desktop]").forEach(function (source) {
+      source.src = isMobile ? source.getAttribute("data-src-mobile") : source.getAttribute("data-src-desktop");
+      source.parentElement.load();
+    });
+  }
+  if ("requestIdleCallback" in window) {
+    requestIdleCallback(loadVideos);
+  } else {
+    setTimeout(loadVideos, 200);
+  }
 
   /* ---- Parallax hero video ---- */
   var heroVideo = document.querySelector(".hero__video");
