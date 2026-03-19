@@ -824,6 +824,53 @@ ul {
 }
 
 /* ============================================================
+   Membership page
+   ============================================================ */
+.membership-table {
+  width: 100%;
+  max-width: 480px;
+  border-collapse: collapse;
+  margin: 1.25rem 0;
+}
+
+.membership-table td {
+  padding: 0.65rem 0.75rem;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.membership-table__amount {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+}
+
+.membership-table__total {
+  font-weight: 700;
+  border-top: 2px solid var(--blue);
+}
+
+.membership-table__total td {
+  border-bottom: none;
+}
+
+.membership-steps {
+  padding-left: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.membership-steps li {
+  margin-bottom: 0.75rem;
+  color: var(--gray);
+}
+
+.membership-ctas {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+/* ============================================================
    Footer
    ============================================================ */
 .footer {

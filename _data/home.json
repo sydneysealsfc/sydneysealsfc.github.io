@@ -1,6 +1,7 @@
 {
   "hero": {
     "videoSrc": "images/hero-compressed.mp4",
+    "videoSrcMobile": "images/hero-mobile.mp4",
     "posterSrc": "images/gallery/community.jpg",
     "ctaText": "Become a Seal",
     "ctaLink": "#join"
@@ -44,9 +45,10 @@
       "We also organise depth sessions, fun dives, masterclasses, competitions, and beach clean-ups throughout the year."
     ],
     "videoSrc": "images/training-timelapse.mp4",
+    "videoSrcMobile": "images/training-timelapse-mobile.mp4",
     "image": "images/gallery/training.jpg",
     "imageAlt": "Group of freedivers posing underwater",
-    "ctaText": "Events & Merch on TeamApp"
+    "ctaText": "Book training here"
   },
   "join": {
     "intro": "Want to join? We're sealiously excited! Membership covers one year with Sydney Seals and the AFA, which you need to compete in any AFA freediving competition in Australia.",
@@ -58,7 +60,7 @@
       "Fun dives",
       "Beach clean-ups"
     ],
-    "outro": "As a not-for-profit, all fees go back into facilitating diving. For in-water events, you will need a freediving certification\u2014please ask us if you have any questions.",
-    "ctaText": "Join via AFA"
+    "outro": "As a not-for-profit, all fees go back to the Club's purposes. For in-water events, you will need a freediving certification\u2014please ask us if you have any questions.",
+    "ctaText": "Learn more"
   }
 }

@@ -5,7 +5,7 @@
   "copyrightYear": "2026",
   "teamAppUrl": "https://www.teamapp.com/clubs/940563?_webpage=v1",
   "joinUrl": "https://australianfreediving.org/membership/",
-  "siteUrl": "https://sydneysealsfc.github.io",
+  "siteUrl": "https://sydneysealsfreediving.org.au",
   "social": {
     "instagram": "https://www.instagram.com/sydney.seals.freediving.club/",
     "facebook": "https://www.facebook.com/groups/1674352359814540/"
@@ -13,6 +13,7 @@
   "nav": [
     { "label": "Home", "url": "/" },
     { "label": "About", "url": "/about/" },
+    { "label": "Membership", "url": "/membership/" },
     { "label": "Gallery", "url": "/gallery/" },
     { "label": "FAQ", "url": "/faq/" },
     { "label": "Committee", "url": "/committee/" }

@@ -262,6 +262,13 @@
     } catch (e) { /* use default */ }
   }
 
+  /* ---- Responsive video source selection ---- */
+  var isMobile = window.innerWidth <= 768;
+  document.querySelectorAll("video source[data-src-desktop]").forEach(function (source) {
+    source.src = isMobile ? source.getAttribute("data-src-mobile") : source.getAttribute("data-src-desktop");
+    source.parentElement.load();
+  });
+
   /* ---- Parallax hero video ---- */
   var heroVideo = document.querySelector(".hero__video");
   if (heroVideo && !prefersReducedMotion && window.matchMedia("(min-width: 769px)").matches) {

@@ -13,6 +13,7 @@ module.exports = function (eleventyConfig) {
 
   // SEO files
   eleventyConfig.addPassthroughCopy({ "robots.txt": "robots.txt" });
+  eleventyConfig.addPassthroughCopy({ "CNAME": "CNAME" });
 
   // Watch CSS and JS for live reload
   eleventyConfig.addWatchTarget("css/");

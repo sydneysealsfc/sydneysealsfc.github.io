@@ -1,0 +1,78 @@
+{% extends "base.njk" %}
+
+{% block content %}
+  <!-- Page header -->
+  <header class="page-header">
+    <div class="container">
+      <h1>{{ title }}</h1>
+      {% if subtitle %}<p>{{ subtitle }}</p>{% endif %}
+    </div>
+  </header>
+
+  <!-- Intro -->
+  <section class="section">
+    <div class="container about-page__content animate-on-scroll">
+      <p>{{ membership.intro }}</p>
+    </div>
+  </section>
+
+  <!-- Benefits -->
+  <section class="section section--alt animate-on-scroll">
+    <div class="container">
+      <h2 class="text-center">What you get</h2>
+      <div class="join__benefits">
+        {% for benefit in membership.benefits %}
+        <div class="join__benefit">{{ benefit }}</div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- Costs -->
+  <section class="section animate-on-scroll">
+    <div class="container about-page__content">
+      <h2>Costs</h2>
+      <p>Annual membership is <strong>${{ membership.costs.total }}</strong>, which covers:</p>
+      <table class="membership-table">
+        <tbody>
+          {% for item in membership.costs.breakdown %}
+          <tr>
+            <td>{{ item.item }}</td>
+            <td class="membership-table__amount">${{ item.amount }}</td>
+          </tr>
+          {% endfor %}
+          <tr class="membership-table__total">
+            <td>Total</td>
+            <td class="membership-table__amount">${{ membership.costs.total }}</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>{{ membership.costs.note }}</p>
+    </div>
+  </section>
+
+  <!-- Safety induction -->
+  <section class="section section--alt animate-on-scroll">
+    <div class="container about-page__content">
+      <h2>Safety induction</h2>
+      <p>{{ membership.induction.text }}</p>
+    </div>
+  </section>
+
+  <!-- How to join -->
+  <section class="section animate-on-scroll">
+    <div class="container about-page__content">
+      <h2>How to join</h2>
+      <ol class="membership-steps">
+        {% for step in membership.howToJoin %}
+        <li>{{ step }}</li>
+        {% endfor %}
+      </ol>
+      <p>{{ membership.certification }}</p>
+      <div class="membership-ctas">
+        <a href="{{ site.joinUrl }}" target="_blank" rel="noopener" class="btn btn--primary">Join via AFA</a>
+        <a href="{{ site.teamAppUrl }}" target="_blank" rel="noopener" class="btn btn--outline">Events &amp; Merch</a>
+      </div>
+    </div>
+  </section>
+{% endblock %}

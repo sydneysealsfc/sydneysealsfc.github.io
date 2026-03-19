@@ -4,7 +4,7 @@
   <!-- Hero -->
   <section class="hero">
     <video class="hero__video" autoplay muted loop playsinline poster="/{{ home.hero.posterSrc }}" aria-hidden="true">
-      <source src="/{{ home.hero.videoSrc }}" type="video/mp4">
+      <source data-src-desktop="/{{ home.hero.videoSrc }}" data-src-mobile="/{{ home.hero.videoSrcMobile }}" type="video/mp4">
     </video>
     <div class="hero__overlay"></div>
     <div class="hero__content">
@@ -26,7 +26,7 @@
           {% endfor %}
           <a href="{{ home.about.linkUrl }}" class="btn btn--outline">{{ home.about.linkText }}</a>
         </div>
-        <img src="/{{ home.about.image }}" alt="{{ home.about.imageAlt }}" class="about__img"{% if home.about.images %} data-images='{{ home.about.images | dump | safe }}'{% endif %}>
+        <img src="/{{ home.about.image }}" alt="{{ home.about.imageAlt }}" class="about__img" loading="lazy"{% if home.about.images %} data-images='{{ home.about.images | dump | safe }}'{% endif %}>
       </div>
     </div>
   </section>
@@ -50,7 +50,7 @@
       <div class="training__grid">
         {% if home.training.videoSrc %}
         <video class="training__img" autoplay muted loop playsinline poster="/{{ home.training.image }}" aria-hidden="true">
-          <source src="/{{ home.training.videoSrc }}" type="video/mp4">
+          <source data-src-desktop="/{{ home.training.videoSrc }}" data-src-mobile="/{{ home.training.videoSrcMobile }}" type="video/mp4">
         </video>
         {% else %}
         <img src="/{{ home.training.image }}" alt="{{ home.training.imageAlt }}" class="training__img">
@@ -77,7 +77,7 @@
         {% endfor %}
       </div>
       <p>{{ home.join.outro | safe }}</p>
-      <a href="{{ site.joinUrl }}" target="_blank" rel="noopener" class="btn btn--primary">{{ home.join.ctaText }}</a>
+      <a href="/membership/" class="btn btn--primary">{{ home.join.ctaText }}</a>
     </div>
   </section>
 {% endblock %}
