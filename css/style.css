@@ -1007,6 +1007,10 @@ ul {
 
   .masonry { column-count: 2; }
 
+  .masonry__credit {
+    opacity: 1;
+  }
+
   .about__grid,
   .training__grid {
     grid-template-columns: 1fr;
