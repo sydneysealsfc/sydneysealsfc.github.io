@@ -34,7 +34,7 @@
     "intro": "We use TeamApp to manage event bookings and sell club merchandise. Once you join, you can browse upcoming events and grab some Seals gear.",
     "merch": [
       { "name": "Seals swim cap", "price": "$14.99", "image": "images/merch/swim-cap.jpg" },
-      { "name": "Mardi Gras 2026 singlet", "price": "$39.99", "image": "images/merch/singlet.jpg" }
+      { "name": "Mardi Gras 2026 singlet", "price": "$39.99", "image": "images/merch/singlet.png" }
     ]
   }
 }
