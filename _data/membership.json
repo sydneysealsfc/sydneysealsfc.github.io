@@ -1,14 +1,15 @@
 {
-  "intro": "Membership with the Sydney Seals gives you access to pool training, depth sessions, competitions, masterclasses, fun dives, and community events. As a member, you also join the Australian Freediving Association (AFA) and are covered by third-party liability insurance for all approved club activities.",
+  "intro": "Membership with the Sydney Seals gives you access to pool training, competitions, masterclasses, fun dives, and community events. As a member, you also join the Australian Freediving Association (AFA) and are covered by third-party liability insurance for all approved club activities.",
   "benefits": [
     "Pool training sessions",
-    "Depth sessions",
+    "AFA membership and insurance coverage",
     "Competitions",
     "Masterclasses and workshops",
     "Fun dives",
     "Beach clean-ups",
     "WhatsApp community of dive buddies",
-    "AFA membership and insurance coverage"
+    "Social events and community",
+    "Discounts on club merchandise"
   ],
   "costs": {
     "total": 125,
@@ -20,7 +21,7 @@
     "note": "Some events and activities come at an additional cost. The club does its best to keep costs as low as possible for members."
   },
   "induction": {
-    "text": "All new members must complete a safety induction before starting pool training or other in-water activities. The induction covers the club's diving protocols, buddy procedures, and simulated water rescues. Once you join, we will help you schedule your induction."
+    "text": "All new members must complete a safety induction before starting pool training. The induction covers the club's diving protocols, buddy procedures, and simulated water rescues. Once you join, we will help you schedule your induction."
   },
   "howToJoin": [
     "Click the button below to join via the Australian Freediving Association website.",
