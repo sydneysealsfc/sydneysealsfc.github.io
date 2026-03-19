@@ -675,6 +675,7 @@ ul {
   font-size: 0.75rem;
   opacity: 0;
   transition: opacity 0.3s ease;
+  z-index: 1;
 }
 
 .masonry__item:hover .masonry__credit {
