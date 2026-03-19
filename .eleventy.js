@@ -1,5 +1,15 @@
+const fs = require("fs");
+const path = require("path");
+
 module.exports = function (eleventyConfig) {
+  // Inline CSS filter — reads the file and returns its contents
+  eleventyConfig.addFilter("inlineCss", function (filePath) {
+    var fullPath = path.resolve(__dirname, filePath);
+    return fs.readFileSync(fullPath, "utf8");
+  });
+
   // Pass through static assets (paths relative to project root, not input dir)
+  // Keep CSS passthrough for cache — browsers that already have it won't re-download
   eleventyConfig.addPassthroughCopy({ "css": "css" });
   eleventyConfig.addPassthroughCopy({ "js": "js" });
   eleventyConfig.addPassthroughCopy({ "images": "images" });
