@@ -14,9 +14,9 @@
     { "label": "Home", "url": "/" },
     { "label": "About", "url": "/about/" },
     { "label": "Membership", "url": "/membership/" },
-    { "label": "Gallery", "url": "/gallery/" },
+    { "label": "Committee", "url": "/committee/" },
     { "label": "FAQ", "url": "/faq/" },
-    { "label": "Committee", "url": "/committee/" }
+    { "label": "Gallery", "url": "/gallery/" }
   ],
   "acknowledgement": "The Sydney Seals Freediving Club acknowledges the traditional custodians of the Country on which we dive, gather, and play. We live and dive across the Country of many Nations, including of the Gadigal, Bidjigal, Guringai, and Dhawaral peoples. We extend our respect to Elders past and present and to traditional custodians who have cared for land and sea Country since time immemorial. We commit to respecting Country and acknowledge that sovereignty was never ceded."
 }
