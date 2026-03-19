@@ -71,7 +71,30 @@
       <p>{{ membership.certification }}</p>
       <div class="membership-ctas">
         <a href="{{ site.joinUrl }}" target="_blank" rel="noopener" class="btn btn--primary">Join via AFA</a>
-        <a href="{{ site.teamAppUrl }}" target="_blank" rel="noopener" class="btn btn--outline">Events &amp; Merch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Events & Merch -->
+  <section class="section section--alt animate-on-scroll">
+    <div class="container about-page__content">
+      <h2>Events and merch</h2>
+      <p>{{ membership.teamApp.intro }}</p>
+      {% if membership.teamApp.merch %}
+      <div class="merch-grid">
+        {% for item in membership.teamApp.merch %}
+        <div class="merch-card">
+          <img src="/{{ item.image }}" alt="{{ item.name }}" loading="lazy">
+          <div class="merch-card__info">
+            <span class="merch-card__name">{{ item.name }}</span>
+            <span class="merch-card__price">{{ item.price }}</span>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      {% endif %}
+      <div class="membership-ctas">
+        <a href="{{ site.teamAppUrl }}" target="_blank" rel="noopener" class="btn btn--primary">Browse on TeamApp</a>
       </div>
     </div>
   </section>

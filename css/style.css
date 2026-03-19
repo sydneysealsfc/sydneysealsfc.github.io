@@ -870,6 +870,44 @@ ul {
   margin-top: 1.5rem;
 }
 
+.merch-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+  max-width: 500px;
+}
+
+.merch-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.merch-card img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.merch-card__info {
+  padding: 0.75rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.merch-card__name {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.merch-card__price {
+  color: var(--blue);
+  font-weight: 600;
+}
+
 /* ============================================================
    Footer
    ============================================================ */

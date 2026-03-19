@@ -4,12 +4,12 @@
     "Pool training sessions",
     "AFA membership and insurance coverage",
     "Competitions",
-    "Masterclasses and workshops",
+    "Masterclasses",
+    "Workshops",
     "Fun dives",
     "Beach clean-ups",
     "WhatsApp community of dive buddies",
-    "Social events and community",
-    "Discounts on club merchandise"
+    "Social events and community"
   ],
   "costs": {
     "total": 125,
@@ -29,5 +29,12 @@
     "Complete your payment ($125 covers your AUF, AFA, and SSFC membership for one year).",
     "We will be in touch to schedule your safety induction and get you set up on our WhatsApp group."
   ],
-  "certification": "You will need a freediving certification to participate in our in-water activities. If you do not have one yet, ask us and we can point you to schools and instructors in Sydney."
+  "certification": "You will need a freediving certification to participate in our in-water activities. If you do not have one yet, ask us and we can point you to schools and instructors in Sydney.",
+  "teamApp": {
+    "intro": "We use TeamApp to manage event bookings and sell club merchandise. Once you join, you can browse upcoming events and grab some Seals gear.",
+    "merch": [
+      { "name": "Seals swim cap", "price": "$14.99", "image": "images/merch/swim-cap.jpg" },
+      { "name": "Mardi Gras 2026 singlet", "price": "$39.99", "image": "images/merch/singlet.jpg" }
+    ]
+  }
 }
