@@ -3,13 +3,12 @@
     "videoSrc": "images/hero-compressed.mp4",
     "videoSrcMobile": "images/hero-mobile.mp4",
     "posterSrc": "images/gallery/community.jpg",
-    "ctaText": "Become a Seal",
-    "ctaLink": "#join"
+    "ctaText": "Become a member",
+    "ctaLink": "/membership/"
   },
   "about": {
     "text": [
-      "Sydney Seals Freediving Club is a not-for-profit, volunteer-run club supporting the development and growth of freedivers in Sydney and surrounding regions. We run pool training, competitions, depth sessions, fun dives, masterclasses, and workshops.",
-      "We are an affiliated club of the Australian Freediving Association (AFA)."
+      "Sydney Seals Freediving Club is not-for-profit and volunteer run, to support the development and growth of freedivers in Sydney Australia and surrounding regions. We are an affiliated Club of the Australian Freediving Association (AFA) established in early 2025, Sydney Australia (Eora)."
     ],
     "image": "images/gallery/2025-04-08-ssfc-first-pool-training-group.jpg",
     "imageAlt": "Sydney Seals first pool training group photo",
@@ -24,43 +23,43 @@
     "linkUrl": "/about/"
   },
   "values": {
-    "intro": "Everything we do grows from these principles.",
+    "intro": "We are grounded in these core values.",
     "items": [
       "Giving",
       "Volunteering",
       "Relationship building",
-      "Positive attitude",
+      "Camaraderie",
       "Continuous learning",
       "Reciprocity",
       "Respect",
       "Humility",
-      "Camaraderie",
+      "Positive and supportive attitude",
       "Care for one another and the environment"
     ]
   },
   "training": {
     "text": [
-      "Join us at pool training where you can expect a structured program to progress your pool disciplines alongside fellow Seals. Beginners and all levels are welcome.",
-      "Pool training currently runs on Tuesday evenings at Marrickville. Once you become a member, submit an expression of interest to join. Training fees cover lane hire; pool entry is separate.",
-      "We also organise depth sessions, fun dives, masterclasses, competitions, and beach clean-ups throughout the year."
+      "Join our programmed pool sessions to improve breathhold and underwater skills in a safe setting. You can expect a program to progress disciplines in the pool. Don’t know all the freediving lingo yet? No worries! Certified beginners and all levels are welcome.",
+      "Pool training is offered with coached and uncoached sessions, located in Marrickville and Randwick on a weekday. There is an instructor, assistant instructor, or experienced member present to ensure the safety of participants.",
+      "At Marrickville the fee paid to the club cover the cost of lane hire, and you will need to pay pool entry separately (fitness passes may cover your entry for Inner West pools!). At Randwick the pool entry fee is covered as part of the fee you pay to the club.",
+      "Become a member and then contact us to express your interest to join pool training. If you're already a member, book training below or download the app to get started."
     ],
     "videoSrc": "images/training-timelapse.mp4",
     "videoSrcMobile": "images/training-timelapse-mobile.mp4",
     "image": "images/gallery/training.jpg",
     "imageAlt": "Group of freedivers posing underwater",
-    "ctaText": "Book training here"
+    "ctaText": "Book training"
   },
   "join": {
-    "intro": "Want to join? We're sealiously excited! Membership covers one year with Sydney Seals and the AFA, which you need to compete in any AFA freediving competition in Australia.",
+    "intro": "Want to become a member of Sydney Seals? We’re sealiously excited! (Yes, expect many more seal puns). Membership covers one year with Sydney Seals and the AFA, which you need to compete in any AFA freediving competition in Australia and participate in club activities.",
     "benefits": [
       "Pool training",
       "Competitions",
       "Masterclasses",
       "Fun dives",
-      "Beach clean-ups",
       "Social events"
     ],
-    "outro": "As a not-for-profit, all fees go back to the Club's purposes. For in-water events, you will need a freediving certification\u2014please ask us if you have any questions.",
-    "ctaText": "Learn more"
+    "outro": "As a not-for-profit, all fees to the club go back into our objectives – that is, facilitating freediving! For in-water events, you will need a freediving certification. Please ask us if you have any questions.",
+    "ctaText": "More about membership"
   }
 }
