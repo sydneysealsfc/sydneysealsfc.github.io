@@ -51,7 +51,8 @@
     "ctaText": "Book training"
   },
   "join": {
-    "intro": "Want to become a member of Sydney Seals? We’re sealiously excited! (Yes, expect many more seal puns). Membership covers one year with Sydney Seals and the AFA, which you need to compete in any AFA freediving competition in Australia and participate in club activities.",
+    "intro": "Want to become a member of Sydney Seals? We’re sealiously excited! (Yes, expect many more seal puns).",
+    "Membership covers one year with Sydney Seals and the AFA, which you need to compete in any AFA freediving competition in Australia and participate in club activities.",
     "benefits": [
       "Pool training",
       "Competitions",
@@ -59,7 +60,8 @@
       "Fun dives",
       "Social events"
     ],
-    "outro": "As a not-for-profit, all fees to the club go back into our objectives – that is, facilitating freediving! For in-water events, you will need a freediving certification. Please ask us if you have any questions.",
+    "outro": "As a not-for-profit, all fees to the club go back into our objectives – that is, facilitating freediving!",
+    "For in-water events, you will need a freediving certification. Please ask us if you have any questions.",
     "ctaText": "More about membership"
   }
 }
