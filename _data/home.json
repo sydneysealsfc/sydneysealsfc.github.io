@@ -39,10 +39,10 @@
   },
   "training": {
     "text": [
-      "Join our programmed pool sessions to improve breathhold and underwater skills in a safe setting. You can expect a program to progress disciplines in the pool. Don’t know all the freediving lingo yet? No worries! Certified beginners and all levels are welcome.",
+      "Join our programmed pool sessions to progress disciplines, improve breathhold, and underwater skills in a safe setting. Certified beginners and all levels are welcome.",
       "Pool training is offered with coached and uncoached sessions, located in Marrickville and Randwick on a weekday. There is an instructor, assistant instructor, or experienced member present to ensure the safety of participants.",
-      "At Marrickville the fee paid to the club cover the cost of lane hire, and you will need to pay pool entry separately (fitness passes may cover your entry for Inner West pools!). At Randwick the pool entry fee is covered as part of the fee you pay to the club.",
-      "Become a member and then contact us to express your interest to join pool training. If you're already a member, book training below or download the app to get started."
+      "The fee paid to the club cover the cost of lane hire and pool entry, with an exception at Marrickville where you pay pool entry separately (fitness passes may cover your entry for Inner West pools!).",
+      "Become a member and then contact us to express your interest to join pool training. If you're already a member, book training below or on the app."
     ],
     "videoSrc": "images/training-timelapse.mp4",
     "videoSrcMobile": "images/training-timelapse-mobile.mp4",
@@ -51,8 +51,7 @@
     "ctaText": "Book training"
   },
   "join": {
-    "intro": "Want to become a member of Sydney Seals? We’re sealiously excited! (Yes, expect many more seal puns).",
-    "Membership covers one year with Sydney Seals and the AFA, which you need to compete in any AFA freediving competition in Australia and participate in club activities.",
+    "intro": "Want to become a member of Sydney Seals? We’re sealiously excited! (Yes, expect many more seal puns). Membership covers one year with Sydney Seals and the AFA, which you need to compete in any AFA freediving competition in Australia and participate in club activities.",
     "benefits": [
       "Pool training",
       "Competitions",
