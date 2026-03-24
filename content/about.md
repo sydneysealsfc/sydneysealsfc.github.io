@@ -2,7 +2,7 @@
 layout: page.njk
 title: About us
 description: Learn about the Sydney Seals Freediving Club, how we formed, our aims, and key documents including the club constitution.
-subtitle: How the Sydney Seals came to exist
+subtitle: How the Sydney Seals Freediving Club came to exist
 permalink: /about/
 pageImage: images/gallery/2025-04-21-ssfc-easter-fun-dive-turtle.jpg
 pageImageAlt: Freediver with turtle at Easter fun dive
