@@ -1,8 +1,9 @@
 {
-  "intro": "Membership with the Sydney Seals gives you access to pool training, competitions, masterclasses, fun dives, and community events. As a member, you also join the Australian Freediving Association (AFA) and are covered by third-party liability insurance for all approved club activities.",
+  "intro": "Membership with the Sydney Seals gives you access to pool training, competitions, masterclasses, fun dives, and social events. Membership with the Sydney Seals and the AFA is for one year. AFA membership is required to compete in any AFA freediving competition in Australia.",
   "benefits": [
+    "AFA membership",
+    "Third-party liability insurance coverage",
     "Pool training sessions",
-    "AFA membership and insurance coverage",
     "Competitions",
     "Masterclasses",
     "Workshops",
@@ -11,6 +12,7 @@
     "WhatsApp community of dive buddies",
     "Social events and community"
   ],
+    "text": "You’ll find a place in the club as our members are varied: recreational freedivers, photographers, merfolk, underwater rugby players, instructors, and athletes who are setting freediving records.",
   "costs": {
     "total": 125,
     "breakdown": [
@@ -21,17 +23,17 @@
     "note": "Some events and activities come at an additional cost. The club does its best to keep costs as low as possible for members."
   },
   "induction": {
-    "text": "All new members must complete a safety induction before starting pool training. The induction covers the club's diving protocols, buddy procedures, and simulated water rescues. Once you join, we will help you schedule your induction."
+    "text": "All new members joining pool training must complete a safety induction before their first session. The induction covers the club's diving protocols, buddy procedures, and simulated water rescues. Once you join, we will help you schedule your induction."
   },
   "howToJoin": [
     "Click the button below to join via the Australian Freediving Association website.",
     "Select Sydney Seals Freediving Club as your club.",
     "Complete your payment ($125 covers your AUF, AFA, and SSFC membership for one year).",
-    "We will be in touch to schedule your safety induction and get you set up on our WhatsApp group."
+    "Contact us to join our WhatsApp group chat and connect with other members, book training and events, and buy merchandise."
   ],
-  "certification": "You will need a freediving certification to participate in our in-water activities. If you do not have one yet, ask us and we can point you to schools and instructors in Sydney.",
+  "certification": "You will need a freediving certification to participate in our in-water activities. Please ask us if you have any questions about this.",
   "teamApp": {
-    "intro": "We use TeamApp to manage event bookings and sell club merchandise. Once you join, you can browse upcoming events and grab some Seals gear. Here are some examples below.",
+    "intro": "We use TeamApp to manage event bookings and sell club merchandise. Once you join, you can browse upcoming events and buy Sydney Seals gear. Here are some examples below.",
     "merch": [
       { "name": "Seals swim cap", "price": "$14.99", "image": "images/merch/swim-cap.jpg" },
       { "name": "Mardi Gras 2026 singlet", "price": "$39.99", "image": "images/merch/singlet.png" }
