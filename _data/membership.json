@@ -1,5 +1,6 @@
 {
   "intro": "Membership with the Sydney Seals gives you access to pool training, competitions, masterclasses, fun dives, and social events. Membership with the Sydney Seals and the AFA is for one year. AFA membership is required to compete in any AFA freediving competition in Australia.",
+  "intro2": "You’ll find a place in the club as our members are varied: recreational freedivers, photographers, merfolk, underwater rugby players, instructors, and athletes who are setting freediving records.",
   "benefits": [
     "AFA membership",
     "Third-party liability insurance coverage",
@@ -11,8 +12,6 @@
     "WhatsApp community of dive buddies",
     "Social events and community"
   ],
-
-  "intro2": "You’ll find a place in the club as our members are varied: recreational freedivers, photographers, merfolk, underwater rugby players, instructors, and athletes who are setting freediving records.",
 
   "costs": {
     "total": 125,
