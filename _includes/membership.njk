@@ -51,14 +51,6 @@
     </div>
   </section>
 
-  <!-- Safety induction -->
-  <section class="section section--alt animate-on-scroll">
-    <div class="container about-page__content">
-      <h2>Safety induction</h2>
-      <p>{{ membership.induction.text }}</p>
-    </div>
-  </section>
-
   <!-- How to join -->
   <section class="section animate-on-scroll">
     <div class="container about-page__content">
@@ -75,10 +67,18 @@
     </div>
   </section>
 
+  <!-- Safety induction -->
+  <section class="section section--alt animate-on-scroll">
+    <div class="container about-page__content">
+      <h2>Already a member?</h2>
+      <p>{{ membership.induction.text }}</p>
+    </div>
+  </section>
+
   <!-- Events & Merch -->
   <section class="section section--alt animate-on-scroll">
     <div class="container about-page__content">
-      <h2>Events and merch</h2>
+      <h2>Events and merchandise</h2>
       <p>{{ membership.teamApp.intro }}</p>
       {% if membership.teamApp.merch %}
       <div class="merch-grid">
