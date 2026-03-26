@@ -382,6 +382,18 @@ ul {
   padding: 1rem 2.5rem;
 }
 
+/* Hero ghost button — white outline, light-blue solid on hover */
+.hero .btn--outline {
+  color: var(--white);
+  border-color: var(--white);
+}
+
+.hero .btn--outline:hover {
+  background: var(--blue-light);
+  border-color: var(--blue-light);
+  color: var(--white);
+}
+
 /* ============================================================
    About / intro section
    ============================================================ */
