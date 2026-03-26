@@ -31,5 +31,5 @@ We foster a collective of freedivers through events and activities, including ef
 ## Key documents
 
 <div class="docs-list">
-  <a href="documents/ssfc-constitution.pdf" target="_blank">&#128196; Constitution (PDF)</a>
+  <a href="/documents/ssfc-constitution.pdf" target="_blank">&#128196; Constitution (PDF)</a>
 </div>
