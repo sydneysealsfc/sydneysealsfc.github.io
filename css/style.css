@@ -426,9 +426,10 @@ ul {
 }
 
 .values__item {
-  background: var(--blue-tint);
+  background: var(--white);
   padding: 1rem 1.25rem;
   border-radius: var(--radius);
+  box-shadow: 0 2px 12px var(--shadow);
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   color: var(--blue);
@@ -436,6 +437,12 @@ ul {
   font-size: 0.95rem;
   width: 200px;
   flex-shrink: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.values__item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
 /* ============================================================
