@@ -14,7 +14,7 @@
       </picture>
       <h1 class="hero__title">{{ site.name }}</h1>
       <p class="hero__tagline">{{ site.tagline }}</p>
-      <a href="{{ home.hero.ctaLink }}" class="btn btn--primary hero__btn">{{ home.hero.ctaText }}</a>
+      <a href="{{ home.hero.ctaLink }}" class="btn btn--outline hero__btn">{{ home.hero.ctaText }}</a>
     </div>
   </section>
 
@@ -27,7 +27,7 @@
           {% for p in home.about.text %}
           <p>{{ p }}</p>
           {% endfor %}
-          <a href="{{ home.about.linkUrl }}" class="btn btn--outline">{{ home.about.linkText }}</a>
+          <a href="{{ home.about.linkUrl }}" class="btn btn--primary">{{ home.about.linkText }}</a>
         </div>
         <img src="/{{ home.about.image }}" alt="{{ home.about.imageAlt }}" class="about__img" loading="lazy" width="1200" height="798"{% if home.about.images %} data-images='{{ home.about.images | dump | safe }}'{% endif %}>
       </div>
