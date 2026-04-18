@@ -37,6 +37,8 @@
   },
   
   "teamApp": {
+    "intro": "All events are listed on our TeamApp, and we have a WhatsApp group chat that you can request to join when you're a member.",
+    "intro2": "New members wanting to join pool training must complete a safety induction before their first session then annually thereafter. The induction covers the club's diving protocols, buddy procedures, and simulated water rescues. Once you join as a member, contact us to join our events and we will help schedule your induction."
     "intro": "We use TeamApp to manage event bookings and sell club merchandise. Once you join, you can browse upcoming events and buy Sydney Seals gear. Here are some examples below.",
     "merch": [
       { "name": "Seals swim cap", "price": "$14.99", "image": "images/merch/swim-cap.jpg" },
