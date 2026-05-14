@@ -1,37 +1,130 @@
-[
-  {
-    "name": "Mathew Hardaker",
-    "role": "President",
-    "image": "images/committee/mathew-hardaker.jpg"
-  },
-  {
-    "name": "Emilia Tjernstr\u00f6m",
-    "role": "Vice-President",
-    "image": "images/committee/emilia-tjernstrom.jpg"
-  },
-  {
-    "name": "Vacant",
-    "role": "Treasurer",
-    "image": ""
-  },
-  {
-    "name": "Bill Cotis",
-    "role": "Secretary",
-    "image": "images/committee/bill-cotis.jpg"
-  },
-  {
-    "name": "Karen Sivieng",
-    "role": "Committee Member",
-    "image": "images/committee/karen-sivieng.jpg"
-  },
-  {
-    "name": "Kate Borysyuk",
-    "role": "Committee Member",
-    "image": "images/committee/kate-borysyuk.jpg"
-  },
-  {
-    "name": "Emma Fitch",
-    "role": "Committee Member",
-    "image": "images/committee/emma-fitch.jpg"
-  }
-]
+{
+  "sections": [
+    {
+      "title": "Committee 2026-2027",
+      "members": [
+        {
+          "name": "Bill Cotis",
+          "role": "President",
+          "image": "images/committee/bill-cotis.jpg"
+        },
+        {
+          "name": "Lucja Nowowiejski",
+          "role": "Vice-President",
+          "image": "images/committee/lucja-nowowiejski.jpeg"
+        },
+        {
+          "name": "Anna Van Nieuwenhuizen",
+          "role": "Treasurer",
+          "image": "images/committee/anna-van-nieuwenhuizen.jpg"
+        },
+        {
+          "name": "Emma Fitch",
+          "role": "Secretary",
+          "image": "images/committee/emma-fitch.jpg"
+        },
+        {
+          "name": "Mathew Hardaker",
+          "role": "Committee Member",
+          "image": "images/committee/mathew-hardaker.jpg"
+        },
+        {
+          "name": "Kate Borysyuk",
+          "role": "Committee Member",
+          "image": "images/committee/kate-borysyuk.jpg"
+        },
+        {
+          "name": "Sasha Loutcheva",
+          "role": "Committee Member",
+          "image": "images/committee/sasha-loutcheva.jpeg"
+        }
+      ]
+    },
+    {
+      "title": "Founding members and first committee 2024-2026",
+      "members": [
+        {
+          "name": "Mathew Hardaker",
+          "role": "President",
+          "image": "images/committee/mathew-hardaker.jpg"
+        },
+        {
+          "name": "Emilia Tjernström",
+          "role": "Vice-President",
+          "image": "images/committee/emilia-tjernstrom.jpg"
+        },
+        {
+          "name": "Anna Van Nieuwenhuizen",
+          "role": "Treasurer",
+          "image": "images/committee/anna-van-nieuwenhuizen.jpg"
+        },
+        {
+          "name": "Bill Cotis",
+          "role": "Secretary",
+          "image": "images/committee/bill-cotis.jpg"
+        },
+        {
+          "name": "Karen Sivieng",
+          "role": "Committee Member",
+          "image": "images/committee/karen-sivieng.jpg"
+        },
+        {
+          "name": "Kate Borysyuk",
+          "role": "Committee Member",
+          "image": "images/committee/kate-borysyuk.jpg"
+        },
+        {
+          "name": "Emma Fitch",
+          "role": "Committee Member",
+          "image": "images/committee/emma-fitch.jpg"
+        }
+      ]
+    },
+    {
+      "title": "Volunteers",
+      "members": [
+        {
+          "name": "Kate Borysyuk",
+          "role": "Coach",
+          "image": "images/committee/kate-borysyuk.jpg"
+        },
+        {
+          "name": "Karen Sivieng",
+          "role": "Coach",
+          "image": "images/committee/karen-sivieng.jpg"
+        },
+        {
+          "name": "Emma Fitch",
+          "role": "Coach / Safety Representative",
+          "image": "images/committee/emma-fitch.jpg"
+        },
+        {
+          "name": "Andreas Bott",
+          "role": "Safety Representative",
+          "image": "images/committee/andreas-bott.jpeg"
+        },
+        {
+          "name": "Dylan Barrett",
+          "role": "Safety Representative",
+          "image": "images/committee/dylan-barrett.jpeg"
+        },
+        {
+          "name": "Ben Emery",
+          "role": "Safety Representative",
+          "image": "images/committee/ben-emery.jpeg"
+        },
+        {
+          "name": "Sasha Loutcheva",
+          "role": "Photographer",
+          "image": "images/committee/sasha-loutcheva.jpeg"
+        },
+        {
+          "name": "Nicole Marshall",
+          "role": "Photographer",
+          "image": "images/committee/nicole-marshall.jpeg"
+        }
+      ],
+      "footer": "And too many safety divers to name!"
+    }
+  ]
+}

@@ -14,7 +14,7 @@
     { "label": "Home", "url": "/" },
     { "label": "About", "url": "/about/" },
     { "label": "Membership", "url": "/membership/" },
-    { "label": "Committee", "url": "/committee/" },
+    { "label": "Volunteers", "url": "/volunteers/" },
     { "label": "FAQ", "url": "/faq/" },
     { "label": "Gallery", "url": "/gallery/" }
   ],

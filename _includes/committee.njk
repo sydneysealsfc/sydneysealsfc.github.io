@@ -16,19 +16,27 @@
       <p style="max-width:700px;margin:0 auto 2rem;text-align:center;color:var(--gray);">{{ intro | safe }}</p>
       {% endif %}
 
-      <div class="committee__grid">
-        {% for member in committee %}
-        <div class="committee__card animate-on-scroll">
-          {% if member.image %}
-          <img src="/{{ member.image }}" alt="{{ member.name }}" class="committee__avatar">
-          {% else %}
-          <div class="committee__avatar committee__avatar--placeholder" aria-hidden="true"></div>
-          {% endif %}
-          <p class="committee__name">{{ member.name }}</p>
-          <p class="committee__role">{{ member.role }}</p>
+      {% for section in committee.sections %}
+      <div class="committee__section">
+        <h2 class="committee__section-title">{{ section.title }}</h2>
+        <div class="committee__grid">
+          {% for member in section.members %}
+          <div class="committee__card animate-on-scroll">
+            {% if member.image %}
+            <img src="/{{ member.image }}" alt="{{ member.name }}" class="committee__avatar">
+            {% else %}
+            <div class="committee__avatar committee__avatar--placeholder" aria-hidden="true"></div>
+            {% endif %}
+            <p class="committee__name">{{ member.name }}</p>
+            <p class="committee__role">{{ member.role }}</p>
+          </div>
+          {% endfor %}
         </div>
-        {% endfor %}
+        {% if section.footer %}
+        <p class="committee__section-footer">{{ section.footer }}</p>
+        {% endif %}
       </div>
+      {% endfor %}
     </div>
   </section>
 {% endblock %}

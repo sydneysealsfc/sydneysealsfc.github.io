@@ -600,6 +600,30 @@ ul {
 /* ============================================================
    Committee
    ============================================================ */
+.committee__section {
+  margin-bottom: 4rem;
+}
+
+.committee__section:last-child {
+  margin-bottom: 0;
+}
+
+.committee__section-title {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--black);
+  margin-bottom: 0.5rem;
+}
+
+.committee__section-footer {
+  text-align: center;
+  color: var(--gray);
+  font-style: italic;
+  margin-top: 1.5rem;
+}
+
 .committee__grid {
   display: flex;
   flex-wrap: wrap;
