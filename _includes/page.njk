@@ -12,6 +12,16 @@
   {% if pageImage %}
   <div class="page-hero">
     <img src="/{{ pageImage }}" alt="{{ pageImageAlt }}" class="page-hero__img">
+    {% if pageImageCredit %}
+    <p class="page-hero__credit">
+      Photo:
+      {% if pageImageCreditUrl %}
+      <a href="{{ pageImageCreditUrl }}" target="_blank" rel="noopener">{{ pageImageCredit }}</a>
+      {% else %}
+      {{ pageImageCredit }}
+      {% endif %}
+    </p>
+    {% endif %}
   </div>
   {% endif %}
 

@@ -6,6 +6,8 @@ subtitle: How the Sydney Seals Freediving Club started
 permalink: /about/
 pageImage: images/gallery/2025-04-21-ssfc-easter-fun-dive-turtle.jpg
 pageImageAlt: Freediver with turtle at Easter fun dive
+pageImageCredit: Sasha
+pageImageCreditUrl: https://www.instagram.com/sasha_luchik/
 ---
 
 ## Who we are

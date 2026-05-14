@@ -1,7 +1,7 @@
 {
   "show": 12,
   "photos": [
-    { "src": "images/gallery/mardigras.jpg", "alt": "Freedivers underwater at Mardi Gras with rainbow colours", "credit": "Nic Marshall", "creditUrl": "https://www.instagram.com/nicmmarshall/" },
+    { "src": "images/gallery/mardigras.jpg", "alt": "Freedivers underwater at Mardi Gras with rainbow colours", "credit": "Sasha", "creditUrl": "https://www.instagram.com/sasha_luchik/" },
     { "src": "images/gallery/hero.jpg", "alt": "Half-underwater split shot of a freediver in a pool", "credit": "Nic Marshall", "creditUrl": "https://www.instagram.com/nicmmarshall/" },
     { "src": "images/gallery/competition.jpg", "alt": "Safety team at Sydney Olympic Park Aquatic Centre", "credit": "" },
     { "src": "images/gallery/community.jpg", "alt": "Freediver making a heart shape underwater", "credit": "Nic Marshall", "creditUrl": "https://www.instagram.com/nicmmarshall/" },
@@ -18,7 +18,7 @@
     { "src": "images/gallery/2026-02-10-ssfc-unsw-pool-training.jpg", "alt": "Sydney Seals pool training at UNSW", "credit": "" },
     { "src": "images/gallery/2026-02-21-ssfc-mardi-gras-group-shirts.jpg", "alt": "Sydney Seals in matching shirts at Mardi Gras", "credit": "" },
     { "src": "images/gallery/2026-02-21-ssfc-mardi-gras-group-outfit-pose.jpg", "alt": "Sydney Seals group pose at Mardi Gras", "credit": "" },
-    { "src": "images/gallery/2025-04-21-ssfc-easter-fun-dive-turtle.jpg", "alt": "Freediver with turtle at Easter fun dive", "credit": "" },
+    { "src": "images/gallery/2025-04-21-ssfc-easter-fun-dive-turtle.jpg", "alt": "Freediver with turtle at Easter fun dive", "credit": "Sasha", "creditUrl": "https://www.instagram.com/sasha_luchik/" },
     { "src": "images/gallery/freediver-swim-caps.jpg", "alt": "Freedivers wearing swim caps", "credit": "" },
     { "src": "images/gallery/easter-fun-dive-freediving-scuba-group.jpg", "alt": "Freediving and scuba group at Easter fun dive", "credit": "" }
   ]

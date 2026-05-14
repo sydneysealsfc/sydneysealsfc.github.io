@@ -838,6 +838,23 @@ ul {
   border-radius: var(--radius);
 }
 
+.page-hero__credit {
+  margin-top: 0.5rem;
+  text-align: right;
+  color: var(--gray);
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+.page-hero__credit a {
+  color: var(--gray);
+  text-decoration: underline;
+}
+
+.page-hero__credit a:hover {
+  color: var(--blue);
+}
+
 .about-page__content p {
   margin-bottom: 1rem;
   color: var(--gray);
