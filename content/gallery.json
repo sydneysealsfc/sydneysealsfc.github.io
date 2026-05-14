@@ -1,6 +1,12 @@
 {
   "show": 20,
   "photos": [
+    { "src": "images/gallery/nats_2026.jpg", "alt": "Sydney Seals at the 2026 AIDA Australian Freediving National Pool Championship", "credit": "Johnavan Ford", "creditUrl": "https://www.instagram.com/jmfinoz/" },
+    { "src": "images/gallery/nats_2026-2.jpg", "alt": "Sydney Seals at the 2026 AIDA Australian Freediving National Pool Championship", "credit": "Johnavan Ford", "creditUrl": "https://www.instagram.com/jmfinoz/" },
+    { "src": "images/gallery/nats_2026-3.jpg", "alt": "Sydney Seals at the 2026 AIDA Australian Freediving National Pool Championship", "credit": "Johnavan Ford", "creditUrl": "https://www.instagram.com/jmfinoz/" },
+    { "src": "images/gallery/nats_2026-4.jpg", "alt": "Sydney Seals at the 2026 AIDA Australian Freediving National Pool Championship", "credit": "Johnavan Ford", "creditUrl": "https://www.instagram.com/jmfinoz/" },
+    { "src": "images/gallery/nats_2026-5.jpg", "alt": "Sydney Seals at the 2026 AIDA Australian Freediving National Pool Championship", "credit": "Johnavan Ford", "creditUrl": "https://www.instagram.com/jmfinoz/" },
+    { "src": "images/gallery/nats_2026-6.jpg", "alt": "Sydney Seals at the 2026 AIDA Australian Freediving National Pool Championship", "credit": "Nic Marshall", "creditUrl": "https://www.instagram.com/nicmmarshall/" },
     { "src": "images/gallery/mardigras.jpg", "alt": "Freedivers underwater at Mardi Gras with rainbow colours", "credit": "Sasha", "creditUrl": "https://www.instagram.com/sasha_luchik/" },
     { "src": "images/gallery/hero.jpg", "alt": "Half-underwater split shot of a freediver in a pool", "credit": "Nic Marshall", "creditUrl": "https://www.instagram.com/nicmmarshall/" },
     { "src": "images/gallery/competition.jpg", "alt": "Safety team at Sydney Olympic Park Aquatic Centre", "credit": "" },
