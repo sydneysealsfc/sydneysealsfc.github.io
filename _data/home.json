@@ -37,26 +37,13 @@
       "Care for one another and the environment"
     ]
   },
-  "pool training": {
+  "training": {
     "text": [
-      "Join our programmed pool sessions to progress disciplines, improve breathhold, and underwater skills in a safe setting. Certified beginners and all levels are welcome.",
-      "Coached and uncoached pool training is located in Marrickville and Randwick on weekdays. There will be an instructor, assistant instructor, or experienced member present to ensure the safety of participants.",
-      "The fee paid to the club cover the cost of lane hire and pool entry, with an exception at Marrickville where you pay pool entry separately (fitness passes may cover your entry for Inner West pools!).",
-      "Become a member and then contact us to express your interest to join pool training. If you're already a member, book training below or on the app."
-    ],
-    "videoSrc": "images/training-timelapse.mp4",
-    "videoSrcMobile": "images/training-timelapse-mobile.mp4",
-    "image": "images/gallery/training.jpg",
-    "imageAlt": "Group of freedivers posing underwater",
-    "ctaText": "Book training"
-  },
-  "depth training": {
-    "text": [
-      "Join our boat-based line training sessions to brave the depths, connect to the ocean and progress your open water skills in a safe setting. Certified beginners and all levels are welcome.",
-      "Depth training takes place offshore, where we can find up to 100m depth a short boat ride past Sydney Harbour Heads. It runs on weekends when we have sufficient demand, in collaboration with a skilled and fully licensed commercial boat operator.",
-      "The fee paid to the club cover the cost of boat charter and depends on the number of participants.",
+      "We run both pool and depth training sessions, so you can progress all disciplines, improve breathhold, and underwater skills in a safe setting. Certified beginners and all levels are welcome.",
+      "Pool training is located in Marrickville and Randwick on weekdays. Depth training runs in collaboration with a skilled and fully licensed commercial boat operator, on weekends when we have sufficient demand. We can find up to 100m depth a short boat ride past Sydney Harbour Heads.",
+      "The fee paid to the club cover the cost of pool lane hire and pool entry (with an exception at Marrickville where you pay pool entry separately), or boat charter in the case of depth training, where the fee depends on the number of participants for every session.",
       "Freediving businesses (schools) interested in sharing boat charter can contact us on sydneysealsfc@gmail.com to discuss opportuinities for collaboration.",
-            "Become a member and then contact us to express your interest to join depth training. If you're already a member, book training below or on the app."
+      "Become a member and then contact us to express your interest to join pool training. If you're already a member, book training below or on the app."
     ],
     "videoSrc": "images/training-timelapse.mp4",
     "videoSrcMobile": "images/training-timelapse-mobile.mp4",
