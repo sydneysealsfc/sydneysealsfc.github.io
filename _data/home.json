@@ -50,6 +50,20 @@
     "imageAlt": "Group of freedivers posing underwater",
     "ctaText": "Book training"
   },
+  "training": {
+    "text": [
+      "Join our boat-based line training sessions to brave the depths, connect to the ocean and progress your open water skills in a safe setting. Certified beginners and all levels are welcome.",
+      "Depth training takes place offshore, where we can find up to 100m depth a short boat ride past Sydney Harbour Heads. It runs on weekends when we have sufficient demand, in collaboration with a skilled and fully licensed commercial boat operator.",
+      "The fee paid to the club cover the cost of boat charter and depends on the number of participants.",
+      "Freediving businesses (schools) interested in sharing boat charter can contact us on sydneysealsfc@gmail.com to discuss opportuinities for collaboration.",
+            "Become a member and then contact us to express your interest to join depth training. If you're already a member, book training below or on the app."
+    ],
+    "videoSrc": "images/training-timelapse.mp4",
+    "videoSrcMobile": "images/training-timelapse-mobile.mp4",
+    "image": "images/gallery/training.jpg",
+    "imageAlt": "Group of freedivers posing underwater",
+    "ctaText": "Book training"
+  },
   "join": {
     "intro": "Membership covers one year with Sydney Seals and the AFA, which you need to compete in any AFA freediving competition in Australia and participate in club activities.",
     "benefits": [
